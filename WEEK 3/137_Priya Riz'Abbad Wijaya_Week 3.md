@@ -28,19 +28,35 @@ C.	Hasil dan Interpretasi
 
   	Hasil analisis ekspresi gen pada dataset GSE106582 menunjukkan bahwa distribusi nilai ekspresi seluruh sampel, baik kelompok jaringan normal maupun jaringan tumor, normal dan seragam serta mengindikasikan bahwa tidak terdapat pergeseran distribusi ekspresi antar sampel. Lebar box pada masing-masing sampel seragam dan menunjukkan bahwa tingkat variasi ekspresi gen antar sampel relatif homogen dan tidak terdapat sampel dengan variabilitas yang menyimpang. Secara keseluruhan, visualisasi boxplot menunjukkan data yang stabil dan tidak menunjukkan adanya batch effect, sehingga dataset layak untuk dilanjutkan ke analisis diferensial ekspresi gen.
 
-![Volcano Plot](Figures/plot.png)
+![Boxplot](Figures/Boxplot_GSE106582.png)
 
-  	Density plot menunjukkan bahwa distribusi nilai ekspresi gen pada kelompok jaringan normal dan jaringan tumor hampir sepenuhnya tumpang tindih. Bentuk kurva dengan adanya puncak pada log2 rendah menunjukkan adanya sebagian besar gen yang memiliki tingkat ekspresi sedang dan dengan adanya ekor panjang ke arah kanan menunjukkan adanya sejumlah kecil gen dengan ekspresi tinggi. Grafik tumpang tindih antar kedua kelompok menandakan tidak adanya pergeseran distribusi ekspresi gen antara jaringan normal dan tumor. Hal ini mengindikasikan bahwa perbedaan biologis kemungkinan terjadi pada subset gen tertentu dan bukan berupa perubahan seluruh transkriptom. Selain itu, kesamaan bentuk dan posisi kurva mengonfirmasi bahwa proses normalisasi dan transformasi telah menghasilkan distribusi yang konsisten antar kelompok dan menunjukkan tidak adanya batch effect.
+Density plot menunjukkan bahwa distribusi nilai ekspresi gen pada kelompok jaringan normal dan jaringan tumor hampir sepenuhnya tumpang tindih. Bentuk kurva dengan adanya puncak pada log2 rendah menunjukkan adanya sebagian besar gen yang memiliki tingkat ekspresi sedang dan dengan adanya ekor panjang ke arah kanan menunjukkan adanya sejumlah kecil gen dengan ekspresi tinggi. Grafik tumpang tindih antar kedua kelompok menandakan tidak adanya pergeseran distribusi ekspresi gen antara jaringan normal dan tumor. Hal ini mengindikasikan bahwa perbedaan biologis kemungkinan terjadi pada subset gen tertentu dan bukan berupa perubahan seluruh transkriptom. Selain itu, kesamaan bentuk dan posisi kurva mengonfirmasi bahwa proses normalisasi dan transformasi telah menghasilkan distribusi yang konsisten antar kelompok dan menunjukkan tidak adanya batch effect.
 
-  	UMAP plot menggambarkan pemisahan yang jelas antara kelompok jaringan normal dan jaringa tumor berdasarkan pola ekspresi gennya. Sampel tumor membentuk satu klaster di sisi kanan bawah, sedangkan sebagian besar sampel normal membentuk klaster terpisah di sisi kiri atas. Pemisahan ini mengindikasikan bahwa profil transkriptom antara jaringan normal dan tumor berbeda secara sistemik, bukan hanya pada sejumlah kecil gen. Adanya beberapa sampel yang berada di klaster yang tidak seharusnya mencerminakan kompleksitas dan heterogenitas dari jaringan tumor itu sendiri.
+![Density Plot](Figures/Density%20Plot_GSE106582.png)
+	
+UMAP plot menggambarkan pemisahan yang jelas antara kelompok jaringan normal dan jaringa tumor berdasarkan pola ekspresi gennya. Sampel tumor membentuk satu klaster di sisi kanan bawah, sedangkan sebagian besar sampel normal membentuk klaster terpisah di sisi kiri atas. Pemisahan ini mengindikasikan bahwa profil transkriptom antara jaringan normal dan tumor berbeda secara sistemik, bukan hanya pada sejumlah kecil gen. Adanya beberapa sampel yang berada di klaster yang tidak seharusnya mencerminakan kompleksitas dan heterogenitas dari jaringan tumor itu sendiri.
 
-  	Volcano plot menunjukkan distribusi gen berdasarkan besar perubahan ekspresi logFC ≥ 0.5 (log2FC ≥ 1) untuk upregulated genes dan logFC ≤ -0.5 (log2FC ≤ -1) untuk downregulated genes serta tingkat signifikansi statistik −log10 adjusted p value 0.05. Dengan kriteria yang digunakan, teridentifikasi 1609 upregulated genes atau gen yang mengalami peningkatan ekspresi dan 1832 downregulated genes atau gen yang mengalami penurunan ekspresi. Hal ini mengindikasikan bahwa pada kondisi tumor terjadi kecenderungan penekanan ekspresi terhadap lebih banyak gen dibandingkan gen yang diinduksi ekspresinya.
+![UMAP Plot](Figures/UMAP%20Plot_GSE106582.png)
 
-  	Heatmap menampilkan pola ekspresi 50 gen teratas dengan perbedaan paling signifikan antara kelompok jaringan normal dan jaringan tumor berdasarkan nilai Z score per gen. Warna merah menunjukkan ekspresi tinggi, sedangkan biru menunjukkan ekspresi rendah dibandingkan rata rata gen tersebut di seluruh sampel. Adanya pemisahan klaster yang jelas antar kelompok sampel menunjukkan bahwa 50 gen tersebut memiliki kemampuan diskriminatif yang kuat untuk membedakan kedua kondisi.
+Volcano plot menunjukkan distribusi gen berdasarkan besar perubahan ekspresi logFC ≥ 0.5 (log2FC ≥ 1) untuk upregulated genes dan logFC ≤ -0.5 (log2FC ≤ -1) untuk downregulated genes serta tingkat signifikansi statistik −log10 adjusted p value 0.05. Dengan kriteria yang digunakan, teridentifikasi 1609 upregulated genes atau gen yang mengalami peningkatan ekspresi dan 1832 downregulated genes atau gen yang mengalami penurunan ekspresi. Hal ini mengindikasikan bahwa pada kondisi tumor terjadi kecenderungan penekanan ekspresi terhadap lebih banyak gen dibandingkan gen yang diinduksi ekspresinya.
+
+![Volcano Plot](Figures/Volcano%20Plot_GSE106582.png)
+
+Heatmap menampilkan pola ekspresi 50 gen teratas dengan perbedaan paling signifikan antara kelompok jaringan normal dan jaringan tumor berdasarkan nilai Z score per gen. Warna merah menunjukkan ekspresi tinggi, sedangkan biru menunjukkan ekspresi rendah dibandingkan rata rata gen tersebut di seluruh sampel. Adanya pemisahan klaster yang jelas antar kelompok sampel menunjukkan bahwa 50 gen tersebut memiliki kemampuan diskriminatif yang kuat untuk membedakan kedua kondisi.
+
+![Heatmap](Figures/Heatmap_GSE106582.png)
  
 3.	GO Enrichment & KEGG Pathway
 
-  	Pada kategori Biological Processes, 50 gen tersebut berperan dalam Positive Regulation of Ubiquitin-Protein Transferase Activity, Xenobiotic Transport, Negative Regulation of Microtubule, dan proses biologis lainnya. Pada kategori Cellular Components, 50 gen terlibat dalam regulasi Basolateral Plasma Membrane, External Side of Apical Plasma Membrane, Lipid Droplet, dan komponen selular lainnya. Pada kategori Molecular Functions, 50 gen tersebut terlibat dalam Cyclase Activator Activity, Guanylate Cyclase Activator Activity, Ligand-Gated Monoatomic Anion Channel Activity, dan aktivitas fungsi molekuler lainnya. Sementara itu, berdasarkan analisis KEGG pathway, 50 gen tersebut hanya signifikan pada jalur Proximal Tubule Bicarbonate Reclamation. 
+  	Pada kategori Biological Processes, 50 gen tersebut berperan dalam Positive Regulation of Ubiquitin-Protein Transferase Activity, Xenobiotic Transport, Negative Regulation of Microtubule, dan proses biologis lainnya. Pada kategori Cellular Components, 50 gen terlibat dalam regulasi Basolateral Plasma Membrane, External Side of Apical Plasma Membrane, Lipid Droplet, dan komponen selular lainnya. Pada kategori Molecular Functions, 50 gen tersebut terlibat dalam Cyclase Activator Activity, Guanylate Cyclase Activator Activity, Ligand-Gated Monoatomic Anion Channel Activity, dan aktivitas fungsi molekuler lainnya. Sementara itu, berdasarkan analisis KEGG pathway, 50 gen tersebut hanya signifikan pada jalur Proximal Tubule Bicarbonate Reclamation.
+
+![Biological Procesess](Figures/GO_Biological_Process_2025_bar_graph.png)
+
+![Cellular Component](Figures/GO_Cellular_Component_2025_bar_graph.png)
+
+![Molecular Function](Figures/GO_Molecular_Function_2025_bar_graph.png)
+
+![KEGG Pathway](Figures/KEGG_2026_bar_graph.png)
 
 D.	Kesimpulan
 
